@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# set directory to wallpaper folder
+# MAKE SURE TO CHANGE TO YOUR PATH
+DIR="/home/conrad/Pictures/wallpapers"
+
+# changes usage for all background pics
+# MAKE SURE TO CHANGE TO YOUR PATH
+chmod 770 /home/conrad/Pictures/wallpapers/bg*
+
+# grabs a random pic
+PIC=$(ls $DIR/bg* | shuf -n1)
+
+# sets random wallpaper
+feh --bg-fill $PIC
